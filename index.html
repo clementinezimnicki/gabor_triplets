@@ -17,9 +17,11 @@
     <script src="jspsych/plugin-survey-likert.js"></script>
     <script src="jspsych/plugin-call-function.js"></script>
     <script src="jspsych/plugin-preload.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.8/browser/pixi.min.js"></script>
+    <script src="jspsych/jspsych-psychophysics.js"></script>
     <script src="jspsych/plugin-image-button-response.js"></script>
-    <script src ="colorNames.json"></script>
     <script src ="checkTrials.json"></script>
+    <script src ="gaborNames.json"></script>
     <script src ="validationRandom.json"></script>
     <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
@@ -55,23 +57,24 @@
         max_load_time: 120000
     });
 
+//    const pixi_flag = jsPsych.data.getURLVariable('pixi_flag') === '1' ? true : false;
+
     //set bg color to medium gray
     document.body.style.backgroundColor = "rgb(89,89,89)" //(D65 illuminant gray)
     
     // generating a user id and file name  
-   // var secret_code  = jsPsych.randomization.randomID(8);
     var secret_code = jsPsych.data.urlVariables().id;
-    var filename = "triplets_colors_" + secret_code + "_part2.csv"; // CHANGE THIS (file name)
+    var filename = "triplets_colors_" + secret_code + "_part1.csv"; // CHANGE THIS (file name)
 
     // this is to save to OSF using DataPipe
     //if want to save data more often, copy this and change the name, and save halfway through
-      const save_data = { 
+    const save_data = {
         type: jsPsychPipe,
         action: "save",
-        experiment_id: "HJf74kSyTwtI", //change this for different experiments in datapipe
+        experiment_id: "w4nQvBPJtc5w",
         filename: filename,
         data_string: ()=>jsPsych.data.get().csv()
-      };
+    };
 
           /* create timeline */
     var timeline = [];
@@ -79,14 +82,12 @@
     // pulling info re: mechanical turk hit
     var urlvar = jsPsych.data.urlVariables();  
       
-    //console.log(colorNames)
-    //console.log(colorHex)
 
     // preload stimuli
     var preload = {
         type: jsPsychPreload,
         auto_preload: true,
-        images: colorHex,
+        images: imgGabor,
         show_progress_bar: true,
         message: "Loading experiment files...",
         error_message: "Oops! There's a problem loading files. Please refresh the page to try again."
@@ -97,55 +98,15 @@
     var stimuli = [];
 
     //the hex codes of all colors we are using
-    for (i = 0; i < colorHex.length; i++){
+    for (i = 0; i < imgGabor.length; i++){
         stimuli.push(
-            {item: colorHex[i]},
+            {item: imgGabor[i]},
         )
     }
 
-    var stimuli_arr = colorHex
-      //plan: 
-      //1) make a pool of random triplets
-      //2) sample
-    var validation = [
-      //this is a list of ones you want to keep in
-      // head is the one on top; choice 1 on Left choice 2 on Right
-                    {head: 'img/55824D.png',	choice_1: 'img/96C58C.png',	choice_2: 'img/3B8378.png'},
-                    {head: 'img/55824D.png',	choice_1: 'img/5E78A1.png',	choice_2: 'img/7EC6BA.png'},
-                    {head: 'img/55824D.png',	choice_1: 'img/96C58C.png',	choice_2: 'img/5E78A1.png'},
-                    {head: 'img/96C58C.png',	choice_1: 'img/7EC6BA.png',	choice_2: 'img/55824D.png'},
-                    {head: 'img/96C58C.png',	choice_1: 'img/55824D.png',	choice_2: 'img/A0BAE6.png'},
-                    {head: 'img/96C58C.png',	choice_1: 'img/A0BAE6.png',	choice_2: 'img/3B8378.png'},
-                    {head: 'img/5E78A1.png',	choice_1: 'img/A0BAE6.png',	choice_2: 'img/3B8378.png'},
-                    {head: 'img/5E78A1.png',	choice_1: 'img/55824D.png',	choice_2: 'img/7EC6BA.png'},
-                    {head: 'img/5E78A1.png',	choice_1: 'img/55824D.png',	choice_2: 'img/A0BAE6.png'},
-                    {head: 'img/A0BAE6.png',	choice_1: 'img/7EC6BA.png',	choice_2: 'img/5E78A1.png'},
-                    {head: 'img/A0BAE6.png',	choice_1: 'img/96C58C.png',	choice_2: 'img/3B8378.png'},
-                    {head: 'img/A0BAE6.png',	choice_1: 'img/5E78A1.png',	choice_2: 'img/96C58C.png'},
-                    {head: 'img/3B8378.png',	choice_1: 'img/7EC6BA.png',	choice_2: 'img/5E78A1.png'},
-                    {head: 'img/3B8378.png',	choice_1: 'img/55824D.png',	choice_2: 'img/7EC6BA.png'},
-                    {head: 'img/7EC6BA.png',	choice_1: 'img/A0BAE6.png',	choice_2: 'img/3B8378.png'},
-                    {head: 'img/7EC6BA.png',	choice_1: 'img/3B8378.png',	choice_2: 'img/96C58C.png'},
-                    {head: 'img/A06776.png',	choice_1: 'img/E6A8B7.png',	choice_2: 'img/A8664B.png'},
-                    {head: 'img/A06776.png',	choice_1: 'img/83764C.png',	choice_2: 'img/F1A78A.png'},
-                    {head: 'img/A06776.png',	choice_1: 'img/83764C.png',	choice_2: 'img/E6A8B7.png'},
-                    {head: 'img/E6A8B7.png',	choice_1: 'img/A06776.png',	choice_2: 'img/F1A78A.png'},
-                    {head: 'img/E6A8B7.png',	choice_1: 'img/A06776.png',	choice_2: 'img/C7B88B.png'},
-                    {head: 'img/E6A8B7.png',	choice_1: 'img/C7B88B.png',	choice_2: 'img/A8664B.png'},
-                    {head: 'img/83764C.png',	choice_1: 'img/C7B88B.png',	choice_2: 'img/A8664B.png'},
-                    {head: 'img/83764C.png',	choice_1: 'img/A06776.png',	choice_2: 'img/F1A78A.png'},
-                    {head: 'img/83764C.png',	choice_1: 'img/A06776.png',	choice_2: 'img/C7B88B.png'},
-                    {head: 'img/C7B88B.png',	choice_1: 'img/F1A78A.png',	choice_2: 'img/83764C.png'},
-                    {head: 'img/C7B88B.png',	choice_1: 'img/E6A8B7.png',	choice_2: 'img/A8664B.png'},
-                    {head: 'img/C7B88B.png',	choice_1: 'img/83764C.png',	choice_2: 'img/E6A8B7.png'},
-                    {head: 'img/F1A78A.png',	choice_1: 'img/C7B88B.png',	choice_2: 'img/A8664B.png'},
-                    {head: 'img/F1A78A.png',	choice_1: 'img/E6A8B7.png',	choice_2: 'img/A8664B.png'},
-                    {head: 'img/A8664B.png',	choice_1: 'img/A06776.png',	choice_2: 'img/F1A78A.png'},
-                    {head: 'img/A8664B.png',	choice_1: 'img/F1A78A.png',	choice_2: 'img/83764C.png'},
-                ]
+    var stimuli_arr = imgGabor
 
-    //concatenate the random (25) validation trials with the chosen (32) validation trials, for a total of 57
-    validation_concat = validationTrials.concat(validation);
+    validation_concat = validationTrials;
 
     //list of 42 check trials that we made separately, in R. check_list is a var in JSON
     var check_shuffled = jsPsych.randomization.repeat(checkList, 1);
@@ -328,7 +289,7 @@
       var arr_pair = [];
 
 // define the trials!
-/*
+
     var trial = {
         type: jsPsychImageButtonResponse,
         stimulus: jsPsych.timelineVariable('item'),    // IF YOU CHANGED THE OBJECT NAMES IN YOUR ARRAY ABOVE, CHANGE THEM HERE TO MATCH     
@@ -357,7 +318,9 @@
             data.sampleAlg = "random";
         }
     };
-*/
+
+
+
     // define the trials!
     var trial = {
         type: jsPsychImageKeyboardResponse,
@@ -425,7 +388,7 @@
         },
     };
   
-/*
+
     // define the validation trials!
     var validation_trial = {
         type: jsPsychImageButtonResponse,
@@ -451,12 +414,12 @@
             data.sampleAlg = "validation"
         }
     };
-*/
+
   // define the validation trials!
   var validation_trial = {
         type: jsPsychImageKeyboardResponse,
         stimulus: function () {
-            row = validation_concat.pop();
+            row = validation.pop();
             head = row.head;
             return head;
         },
@@ -569,30 +532,6 @@
         }
     };
 
-
-/*
-    // define the attention checks
-    //
-    var check_trial = {
-        type: jsPsychImageButtonResponse,
-        stimulus: jsPsych.timelineVariable('head'),         
-        choices: function(){
-            arr_pair = [jsPsych.timelineVariable('choice_1'), jsPsych.timelineVariable('choice_2')];
-            return arr_pair;
-        },
-        button_html: '<button class="jspsych-btn-ckz"><img src= %choice%></button>',
-        on_finish: function(data){
-        
-            data.choices = arr_pair;
-            if (data.response == jsPsych.timelineVariable('correct_choice')){
-                data.correct = true;
-            } else {
-                data.correct = false; 
-            }
-            data.sampleAlg = "check";
-        }
-    };
-*/
     
     var if_trial_check = {
         type: jsPsychHtmlKeyboardResponse,

@@ -3,17 +3,39 @@ library("rjson")
 #install.packages("jsonlite")
 library("jsonlite")
 
-setwd("~/Documents/GitHub/color_triplets")
+setwd("~/Documents/GitHub/gabor_triplets/img/")
 
-#make json of hex code file names
-filenames<- list.files("img", pattern="*.png", full.names=TRUE)
-filenames2 <- as.vector(filenames) # this is the vector of file names
-filenames_json <- toJSON(filenames2) 
-write(filenames_json, "test.json") # save json
+
+# Set the directory containing the images
+image_dir <- "~/Documents/GitHub/gabor_triplets/img/"  # Change this to your actual folder path
+
+# List all files in the directory matching your naming pattern
+image_files <- list.files(image_dir, pattern = "gabor*", full.names = TRUE)
+
+# Sort files to ensure correct renaming order
+image_files <- sort(image_files)
+
+# Generate new names (gabor0, gabor10, ..., gabor350)
+new_names <- paste0(image_dir, "/gabor", seq(0, 350, by = 10), ".png")  # Change extension if needed
+
+# Rename the files
+file.rename(image_files, new_names)
+
+# Check renamed files
+print(new_names)
+
+
+#make a list of all gabors, with format gaborMap[10]
+# Generate a sequence from 10 to 350, increasing by 10
+#tilt_values <- seq(0, 350, by = 10)
+# Create the list of strings
+#gabor_list <- paste0("gaborMap['gabor", tilt_values, "']")
+# Print the result
+#print(gabor_list)
 
 #make json of validation triplets
 # Generate all combinations of 3 from the vector
-all_combinations <- combn(filenames2, 3)
+all_combinations <- combn(gabor_list, 3)
 
 # Randomly sample 25 sets of combinations
 set.seed(123)  # Set seed for reproducibility
@@ -45,16 +67,28 @@ check_list_2 <- lapply(22:42, function(i) {
 
 
 # Format as an object without the outer array
-#json_output <- gsub("\\\\", "",check_list_1)
+json_output <- gsub("\\\\", "",check_list_1)
 json_output <- gsub("^\\[\n|\\]\\s*$", "",json_output)
 json_output <- gsub("list(", "",json_output, fixed=TRUE)
 json_output <- gsub("\\\\", "",json_output)
 
+json_output1 <- gsub("\\\\", "",check_list_2)
+json_output1 <- gsub("^\\[\n|\\]\\s*$", "",json_output1)
+json_output1 <- gsub("list(", "",json_output1, fixed=TRUE)
+json_output1 <- gsub("\\\\", "",json_output1)
+
+json_output <- c(json_output, json_output1)
+
+json_output0 <- gsub("\\\\", "",sets_list)
+json_output0 <- gsub("^\\[\n|\\]\\s*$", "",json_output0)
+json_output0 <- gsub("list(", "",json_output0, fixed=TRUE)
+json_output0 <- gsub("\\\\", "",json_output0)
 
 # Convert the list to JSON
-json_output <- toJSON(sets_list, auto_unbox=TRUE, pretty = TRUE)
+json_output <- toJSON(json_output0, auto_unbox=TRUE, pretty = TRUE)
 
 # View the JSON output
 #cat(json_output)
 write(json_output, "validationRandom.json")
+
 
