@@ -597,7 +597,7 @@
         //prompt: "Select the item most similar to the item on top",
         sample :{
             type: 'without-replacement',
-            size: 2 // CHANGE THIS if you want a different number of validation trials per block; originally 5
+            size: 4 // CHANGE THIS if you want a different number of validation trials per block; originally 5
         }
     };
 
@@ -609,7 +609,7 @@
         randomize_order: true,
          sample: {
             type: 'with-replacement', //originally with replacement
-            size: 17 // CHANGE THIS if you want a different number of regular trials per block; it is originally 20
+            size: 36 // CHANGE THIS if you want a different number of regular trials per block; it is originally 20
         }
     };
 
@@ -631,21 +631,22 @@
     };
         
 
-    // x trials total
-        // 84 (52+32) are validation trials; 
-        // 714 are "regular" trials, so 238 trials per block
-            //17*42 = 714
-            //17*14 = 238, 238 * 3 = 714
-        // 42 attention checks (1 check per ~17 real trials, or 1 check for every 14 repetitions)
-    //in each block there are:
-        //238 "regular" trials
-        //14 attention checks
-        //28 validation trials
+    //goal: ~600-ish trials total
+        //60 validation trials total
+        //10 check trials
+        //530 random trials ("regular")
+
+    //reality: 
+        // 3 blocks * 5 repetitions per block * 1 trial = 15 check trials total
+        // 3 blocks * 5 repetitions per block * 4 trials = 60 validation trials total
+        // 3 blocks * 5 repetitions per block * 36 trials = 540 random trials total
+
+    // in each block, we have 180 random trials, 5 check trials, and 20 validation trials
 
     var procedure = {
         timeline: [trial_procedure, check_procedure, validation_procedure],
         randomize_order: true,
-        repetitions: 14
+        repetitions: 5 //was 14
     };
         
     // run the procedure 3 times with breaks in between
