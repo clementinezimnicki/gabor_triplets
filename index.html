@@ -389,37 +389,13 @@
     };
   
 
-    // define the validation trials!
-    var validation_trial = {
-        type: jsPsychImageButtonResponse,
-        stimulus: function(){
-            row = validation_concat.pop();
-            head = row.head;
-            return head;},         
-        choices: function(){
-            arr_pair = [row.choice_1, row.choice_2];
-            return arr_pair;
-        },
-        button_html: '<button class="jspsych-btn-ckz"><img src= %choice%></button>',
-        on_finish: function(data){
-            data.choices = arr_pair;
-            n = 1;
-            var data_last = jsPsych.data.get().last(n);
-            lasttrialdata_rt = data_last.select('rt').mean();
-            if (lasttrialdata_rt < 1000){
-                    data.speedy = true;
-                } else {
-                    data.speedy = false; 
-            }
-            data.sampleAlg = "validation"
-        }
-    };
+
 
   // define the validation trials!
   var validation_trial = {
         type: jsPsychImageKeyboardResponse,
         stimulus: function () {
-            row = validation.pop();
+            row = validation_concat.pop();
             head = row.head;
             return head;
         },
