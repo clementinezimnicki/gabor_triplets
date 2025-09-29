@@ -1,5 +1,4 @@
-{
-    "imgGabor": [
+imgGabor= [
         "img/gabor0_155.png",
         "img/gabor0_255.png",
         "img/gabor100_155.png",
@@ -37,4 +36,3 @@
         "img/gabor90_155.png",
         "img/gabor90_255.png"
     ]
-}
