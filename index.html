@@ -70,11 +70,13 @@
     var secret_code = jsPsych.data.urlVariables().id;
     var filename = "gabor_contrast_" + secret_code + "_part1.csv"; // CHANGE THIS (file name)
 
+
     // capture info from Prolific
    // var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
   //  var study_id = jsPsych.data.getURLVariable('STUDY_ID');
    // var session_id = jsPsych.data.getURLVariable('SESSION_ID');
 
+       // uncomment all below for Prolific
     //jsPsych.data.addProperties({
     //subject_id: subject_id
     //study_id: study_id,
@@ -86,7 +88,7 @@
     //var filename = "triplets_colors_" + secret_code + "_part1.csv"; // CHANGE THIS (file name)
 
     //const subject_id = jsPsych.randomization.randomID(10);
-    const filename = `${subject_id}.csv`;
+    //const filename = `${subject_id}.csv`;
     // this is to save to OSF using DataPipe
     //if want to save data more often, copy this and change the name, and save halfway through
     const save_data = {
