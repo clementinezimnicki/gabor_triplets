@@ -1,4 +1,5 @@
-[
+validationTrials = [
+
   {
     "head": "img/gabor110_255.png",
     "choice_1": "img/gabor10_255.png",
