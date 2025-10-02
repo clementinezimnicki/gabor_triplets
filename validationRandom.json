@@ -3,7 +3,7 @@ validationTrials = [
   {
     "head": "img/gabor110_255.png",
     "choice_1": "img/gabor10_255.png",
-    "choice_2": "img/gabor130_155.png"
+    "choice_2": "img/gabor130_191.png"
   },
   {
     "head": "img/gabor140_255.png",
@@ -11,78 +11,78 @@ validationTrials = [
     "choice_2": "img/gabor40_255.png"
   },
   {
-    "head": "img/gabor0_155.png",
-    "choice_1": "img/gabor140_155.png",
+    "head": "img/gabor0_191.png",
+    "choice_1": "img/gabor140_191.png",
     "choice_2": "img/gabor150_255.png"
   },
   {
-    "head": "img/gabor70_155.png",
-    "choice_1": "img/gabor140_155.png",
-    "choice_2": "img/gabor80_155.png"
+    "head": "img/gabor70_191.png",
+    "choice_1": "img/gabor140_191.png",
+    "choice_2": "img/gabor80_191.png"
   },
   {
-    "head": "img/gabor120_155.png",
-    "choice_1": "img/gabor160_155.png",
-    "choice_2": "img/gabor10_155.png"
+    "head": "img/gabor120_191.png",
+    "choice_1": "img/gabor160_191.png",
+    "choice_2": "img/gabor10_191.png"
   },
   {
-    "head": "img/gabor30_155.png",
-    "choice_1": "img/gabor80_155.png",
-    "choice_2": "img/gabor130_155.png"
+    "head": "img/gabor30_191.png",
+    "choice_1": "img/gabor80_191.png",
+    "choice_2": "img/gabor130_191.png"
   },
   {
     "head": "img/gabor0_255.png",
-    "choice_1": "img/gabor40_155.png",
-    "choice_2": "img/gabor140_155.png"
+    "choice_1": "img/gabor40_191.png",
+    "choice_2": "img/gabor140_191.png"
   },
   {
     "head": "img/gabor40_255.png",
     "choice_1": "img/gabor100_255.png",
-    "choice_2": "img/gabor50_155.png"
+    "choice_2": "img/gabor50_191.png"
   },
   {
-    "head": "img/gabor10_155.png",
+    "head": "img/gabor10_191.png",
     "choice_1": "img/gabor80_255.png",
-    "choice_2": "img/gabor70_155.png"
+    "choice_2": "img/gabor70_191.png"
   },
   {
-    "head": "img/gabor80_155.png",
-    "choice_1": "img/gabor150_155.png",
+    "head": "img/gabor80_191.png",
+    "choice_1": "img/gabor150_191.png",
     "choice_2": "img/gabor120_255.png"
   },
   {
-    "head": "img/gabor50_155.png",
-    "choice_1": "img/gabor90_155.png",
+    "head": "img/gabor50_191.png",
+    "choice_1": "img/gabor90_191.png",
     "choice_2": "img/gabor80_255.png"
   },
   {
-    "head": "img/gabor140_155.png",
+    "head": "img/gabor140_191.png",
     "choice_1": "img/gabor110_255.png",
-    "choice_2": "img/gabor160_155.png"
+    "choice_2": "img/gabor160_191.png"
   },
   {
     "head": "img/gabor150_255.png",
-    "choice_1": "img/gabor10_155.png",
+    "choice_1": "img/gabor10_191.png",
     "choice_2": "img/gabor60_255.png"
   },
   {
     "head": "img/gabor130_255.png",
-    "choice_1": "img/gabor160_155.png",
-    "choice_2": "img/gabor60_155.png"
+    "choice_1": "img/gabor160_191.png",
+    "choice_2": "img/gabor60_191.png"
   },
   {
-    "head": "img/gabor160_155.png",
-    "choice_1": "img/gabor110_155.png",
-    "choice_2": "img/gabor150_155.png"
+    "head": "img/gabor160_191.png",
+    "choice_1": "img/gabor110_191.png",
+    "choice_2": "img/gabor150_191.png"
   },
   {
     "head": "img/gabor10_255.png",
-    "choice_1": "img/gabor120_155.png",
-    "choice_2": "img/gabor170_155.png"
+    "choice_1": "img/gabor120_191.png",
+    "choice_2": "img/gabor170_191.png"
   },
   {
     "head": "img/gabor40_255.png",
-    "choice_1": "img/gabor50_155.png",
+    "choice_1": "img/gabor50_191.png",
     "choice_2": "img/gabor0_255.png"
   },
   {
@@ -92,68 +92,68 @@ validationTrials = [
   },
   {
     "head": "img/gabor0_255.png",
-    "choice_1": "img/gabor150_155.png",
-    "choice_2": "img/gabor90_155.png"
+    "choice_1": "img/gabor150_191.png",
+    "choice_2": "img/gabor90_191.png"
   },
   {
     "head": "img/gabor0_255.png",
     "choice_1": "img/gabor120_255.png",
-    "choice_2": "img/gabor70_155.png"
+    "choice_2": "img/gabor70_191.png"
   },
   {
     "head": "img/gabor160_255.png",
-    "choice_1": "img/gabor150_155.png",
-    "choice_2": "img/gabor160_155.png"
+    "choice_1": "img/gabor150_191.png",
+    "choice_2": "img/gabor160_191.png"
   },
   {
-    "head": "img/gabor130_155.png",
-    "choice_1": "img/gabor0_155.png",
+    "head": "img/gabor130_191.png",
+    "choice_1": "img/gabor0_191.png",
     "choice_2": "img/gabor20_255.png"
   },
   {
     "head": "img/gabor150_255.png",
     "choice_1": "img/gabor110_255.png",
-    "choice_2": "img/gabor20_155.png"
+    "choice_2": "img/gabor20_191.png"
   },
   {
     "head": "img/gabor40_255.png",
-    "choice_1": "img/gabor30_155.png",
-    "choice_2": "img/gabor160_155.png"
+    "choice_1": "img/gabor30_191.png",
+    "choice_2": "img/gabor160_191.png"
   },
   {
     "head": "img/gabor120_255.png",
-    "choice_1": "img/gabor130_155.png",
-    "choice_2": "img/gabor20_155.png"
+    "choice_1": "img/gabor130_191.png",
+    "choice_2": "img/gabor20_191.png"
   },
   {
     "head": "img/gabor130_255.png",
-    "choice_1": "img/gabor170_155.png",
-    "choice_2": "img/gabor50_155.png"
+    "choice_1": "img/gabor170_191.png",
+    "choice_2": "img/gabor50_191.png"
   },
   {
     "head": "img/gabor100_255.png",
     "choice_1": "img/gabor110_255.png",
-    "choice_2": "img/gabor80_155.png"
+    "choice_2": "img/gabor80_191.png"
   },
   {
-    "head": "img/gabor70_155.png",
-    "choice_1": "img/gabor90_155.png",
-    "choice_2": "img/gabor110_155.png"
+    "head": "img/gabor70_191.png",
+    "choice_1": "img/gabor90_191.png",
+    "choice_2": "img/gabor110_191.png"
   },
   {
-    "head": "img/gabor170_155.png",
-    "choice_1": "img/gabor130_155.png",
-    "choice_2": "img/gabor30_155.png"
+    "head": "img/gabor170_191.png",
+    "choice_1": "img/gabor130_191.png",
+    "choice_2": "img/gabor30_191.png"
   },
   {
-    "head": "img/gabor30_155.png",
+    "head": "img/gabor30_191.png",
     "choice_1": "img/gabor170_255.png",
-    "choice_2": "img/gabor170_155.png"
+    "choice_2": "img/gabor170_191.png"
   },
   {
     "head": "img/gabor20_255.png",
-    "choice_1": "img/gabor50_155.png",
-    "choice_2": "img/gabor20_155.png"
+    "choice_1": "img/gabor50_191.png",
+    "choice_2": "img/gabor20_191.png"
   },
   {
     "head": "img/gabor140_255.png",
@@ -166,38 +166,38 @@ validationTrials = [
     "choice_2": "img/gabor20_255.png"
   },
   {
-    "head": "img/gabor110_155.png",
+    "head": "img/gabor110_191.png",
     "choice_1": "img/gabor60_255.png",
-    "choice_2": "img/gabor80_155.png"
+    "choice_2": "img/gabor80_191.png"
   },
   {
-    "head": "img/gabor10_155.png",
-    "choice_1": "img/gabor60_155.png",
-    "choice_2": "img/gabor0_155.png"
+    "head": "img/gabor10_191.png",
+    "choice_1": "img/gabor60_191.png",
+    "choice_2": "img/gabor0_191.png"
   },
   {
     "head": "img/gabor10_255.png",
     "choice_1": "img/gabor170_255.png",
-    "choice_2": "img/gabor50_155.png"
+    "choice_2": "img/gabor50_191.png"
   },
   {
-    "head": "img/gabor160_155.png",
+    "head": "img/gabor160_191.png",
     "choice_1": "img/gabor10_255.png",
-    "choice_2": "img/gabor40_155.png"
+    "choice_2": "img/gabor40_191.png"
   },
   {
-    "head": "img/gabor60_155.png",
-    "choice_1": "img/gabor10_155.png",
-    "choice_2": "img/gabor90_155.png"
+    "head": "img/gabor60_191.png",
+    "choice_1": "img/gabor10_191.png",
+    "choice_2": "img/gabor90_191.png"
   },
   {
-    "head": "img/gabor150_155.png",
+    "head": "img/gabor150_191.png",
     "choice_1": "img/gabor10_255.png",
-    "choice_2": "img/gabor80_155.png"
+    "choice_2": "img/gabor80_191.png"
   },
   {
-    "head": "img/gabor40_155.png",
-    "choice_1": "img/gabor120_155.png",
+    "head": "img/gabor40_191.png",
+    "choice_1": "img/gabor120_191.png",
     "choice_2": "img/gabor150_255.png"
   },
   {
@@ -207,72 +207,72 @@ validationTrials = [
   },
   {
     "head": "img/gabor160_255.png",
-    "choice_1": "img/gabor170_155.png",
-    "choice_2": "img/gabor10_155.png"
+    "choice_1": "img/gabor170_191.png",
+    "choice_2": "img/gabor10_191.png"
   },
   {
-    "head": "img/gabor50_155.png",
-    "choice_1": "img/gabor100_155.png",
+    "head": "img/gabor50_191.png",
+    "choice_1": "img/gabor100_191.png",
     "choice_2": "img/gabor60_255.png"
   },
   {
     "head": "img/gabor0_255.png",
-    "choice_1": "img/gabor70_155.png",
+    "choice_1": "img/gabor70_191.png",
     "choice_2": "img/gabor10_255.png"
   },
   {
-    "head": "img/gabor100_155.png",
+    "head": "img/gabor100_191.png",
     "choice_1": "img/gabor160_255.png",
-    "choice_2": "img/gabor50_155.png"
+    "choice_2": "img/gabor50_191.png"
   },
   {
-    "head": "img/gabor140_155.png",
+    "head": "img/gabor140_191.png",
     "choice_1": "img/gabor20_255.png",
-    "choice_2": "img/gabor150_155.png"
+    "choice_2": "img/gabor150_191.png"
   },
   {
     "head": "img/gabor40_255.png",
     "choice_1": "img/gabor0_255.png",
-    "choice_2": "img/gabor0_155.png"
+    "choice_2": "img/gabor0_191.png"
   },
   {
     "head": "img/gabor30_255.png",
     "choice_1": "img/gabor170_255.png",
-    "choice_2": "img/gabor120_155.png"
+    "choice_2": "img/gabor120_191.png"
   },
   {
     "head": "img/gabor170_255.png",
     "choice_1": "img/gabor60_255.png",
-    "choice_2": "img/gabor70_155.png"
+    "choice_2": "img/gabor70_191.png"
   },
   {
-    "head": "img/gabor140_155.png",
+    "head": "img/gabor140_191.png",
     "choice_1": "img/gabor70_255.png",
     "choice_2": "img/gabor30_255.png"
   },
   {
-    "head": "img/gabor150_155.png",
+    "head": "img/gabor150_191.png",
     "choice_1": "img/gabor20_255.png",
     "choice_2": "img/gabor80_255.png"
   },
   {
-    "head": "img/gabor20_155.png",
-    "choice_1": "img/gabor0_155.png",
-    "choice_2": "img/gabor110_155.png"
+    "head": "img/gabor20_191.png",
+    "choice_1": "img/gabor0_191.png",
+    "choice_2": "img/gabor110_191.png"
   },
   {
-    "head": "img/gabor0_155.png",
+    "head": "img/gabor0_191.png",
     "choice_1": "img/gabor30_255.png",
     "choice_2": "img/gabor110_255.png"
   },
   {
     "head": "img/gabor10_255.png",
-    "choice_1": "img/gabor110_155.png",
-    "choice_2": "img/gabor70_155.png"
+    "choice_1": "img/gabor110_191.png",
+    "choice_2": "img/gabor70_191.png"
   },
   {
-    "head": "img/gabor130_155.png",
-    "choice_1": "img/gabor90_155.png",
+    "head": "img/gabor130_191.png",
+    "choice_1": "img/gabor90_191.png",
     "choice_2": "img/gabor0_255.png"
   },
   {
@@ -286,18 +286,18 @@ validationTrials = [
     "choice_2": "img/gabor0_255.png"
   },
   {
-    "head": "img/gabor50_155.png",
-    "choice_1": "img/gabor140_155.png",
-    "choice_2": "img/gabor170_155.png"
+    "head": "img/gabor50_191.png",
+    "choice_1": "img/gabor140_191.png",
+    "choice_2": "img/gabor170_191.png"
   },
   {
-    "head": "img/gabor70_155.png",
+    "head": "img/gabor70_191.png",
     "choice_1": "img/gabor80_255.png",
-    "choice_2": "img/gabor170_155.png"
+    "choice_2": "img/gabor170_191.png"
   },
   {
     "head": "img/gabor130_255.png",
     "choice_1": "img/gabor140_255.png",
-    "choice_2": "img/gabor160_155.png"
+    "choice_2": "img/gabor160_191.png"
   }
 ]
