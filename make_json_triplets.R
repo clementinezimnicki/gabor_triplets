@@ -74,6 +74,7 @@ check_list_2 <- lapply(11:20, function(i) {
 
 
 # Format as an object without the outer array
+#Its just awkwardly formatted as is, so gotta fix it
 json_output2 <- gsub("\\\\", "",check_list_1)
 json_output2 <- gsub("^\\[\n|\\]\\s*$", "",json_output2)
 json_output2 <- gsub("list(", "",json_output2, fixed=TRUE)
@@ -104,6 +105,6 @@ json_output_final <- toJSON(json_output, auto_unbox=TRUE, pretty = TRUE)
 
 # View the JSON output
 #cat(json_output)
-write(json_output_final, "~/Documents/GitHub/gabor_triplets/checkTrials.json")
+write(json_output_final, "~/Documents/GitHub/gabor_triplets/checkTrials2.json")
 
 
