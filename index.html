@@ -68,7 +68,7 @@
     
     // generating a user id and file name  
     var secret_code = jsPsych.data.urlVariables().id;
-    var filename = "gabor_contrast_" + secret_code + "_part1.csv"; // CHANGE THIS (file name)
+    var filename = "gabor_contrast_" + secret_code + "_part2.csv"; // CHANGE THIS (file name)
 
 
     // capture info from Prolific
@@ -285,17 +285,16 @@
     var instructions = {
       type: jsPsychHtmlButtonResponse, // CHANGE THIS (instructions)
       stimulus: "<p>In each trial of this task, you will see three images: one target item on top, and two choices beneath the target item." +
-        "</p><p>For each trial, <strong>please select the item that is most like the target item.</strong><br>"+
-        "If you think the item on the <strong>left</strong> is most similar to the item on top, please press the left arrow key.<br>" +
-        "If you think the item on the <strong>right</strong> is most similar to the item on top, please press the right arrow key.<br>" +
+        "</p><p>For each trial, please select the item that is most like the target item <strong>in terms of orientation.</strong><br>"+
+        "If you think the item on the <strong>left</strong> is most similar to the item on top in terms of orientation, please press the left arrow key.<br>" +
+        "If you think the item on the <strong>right</strong> is most similar to the item on top in terms of orientation, please press the right arrow key.<br>" +
         "<p>There may be trials with no obvious answer. In those cases, use your best judgment." +
         "<p>There will be 3 rounds of this task with 205 trials per round. You will have the opportunity to take breaks between rounds. </p>"+
-          "<p>Click 'Continue' to begin the test.</p>",
+          "<p>Click 'Continue' to move on.</p>",
         choices: ["Continue"],
         post_trial_gap: 2000,
         on_finish: function(){
             shuffle(validation_concat);
-
         }
     };
    timeline.push(instructions);  
