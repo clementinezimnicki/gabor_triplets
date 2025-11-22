@@ -94,7 +94,7 @@
     const save_data = {
         type: jsPsychPipe,
         action: "save",
-        experiment_id: "1PfIHXyRbL1g",
+        experiment_id: "DbfSaVhA7T0p",
         filename: filename,
         data_string: ()=>jsPsych.data.get().csv()
     };
@@ -285,7 +285,8 @@
     var instructions = {
       type: jsPsychHtmlButtonResponse, // CHANGE THIS (instructions)
       stimulus: "<p>In each trial of this task, you will see three images: one target item on top, and two choices beneath the target item." +
-        "</p><p>For each trial, please select the item that is most like the target item <strong>in terms of orientation.</strong><br>"+
+        "</p><p>For each trial, please select the item that is most like the target item<br>" +
+        "<strong>in terms of orientation.</strong><br>"+
         "If you think the item on the <strong>left</strong> is most similar to the item on top in terms of orientation, please press the left arrow key.<br>" +
         "If you think the item on the <strong>right</strong> is most similar to the item on top in terms of orientation, please press the right arrow key.<br>" +
         "<p>There may be trials with no obvious answer. In those cases, use your best judgment." +
